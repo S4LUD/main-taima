@@ -1,0 +1,100 @@
+._header {
+  height: 56px;
+  padding: 0px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 200px;
+    img {
+      width: 32px;
+      border-radius: 50%;
+    }
+  }
+  .logo {
+    font-family: $logo-font;
+    letter-spacing: 10px;
+    font-weight: 800;
+    font-size: 20px;
+    width: 200px;
+  }
+  .menu-container {
+    display: flex;
+    z-index: 1;
+    border-bottom: 1px solid #ececec;
+    .dropdown {
+      height: 56px;
+      display: flex;
+      color: #000000;
+      &:hover .drop-menu {
+        display: block;
+      }
+      &:hover .btn {
+        border-bottom: 2px solid #000000;
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        cursor: default;
+        font-size: 16px;
+        padding: 0 15px;
+        border-bottom: 2px solid #ffffff;
+        transition: border-bottom 100ms ease-in-out;
+        transition-delay: 100ms;
+      }
+      .drop-menu {
+        display: none;
+        position: absolute;
+        width: 600px;
+        margin: 56px auto;
+        left: 0;
+        right: 0;
+        padding-top: 10px;
+        animation: fadeInUp;
+        animation-duration: 500ms;
+        .menu {
+          background: #ffffff;
+          box-shadow: 0 10px 20px 0 #0000000d;
+          border: 1px solid #ececec;
+          border-radius: 5px;
+          padding: 20px;
+          height: max-content;
+          .m-title {
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+          .md-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            .menu-desc {
+              border-radius: 5px;
+              padding: 10px;
+              cursor: default;
+              color: #000000;
+              &:hover {
+                background: #f8fafd;
+              }
+              .md-title {
+                font-size: 16px;
+                margin-bottom: 5px;
+              }
+              .desc {
+                font-size: 14px;
+                color: #858585;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // .container {
+
+  // }
+}
