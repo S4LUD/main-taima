@@ -17,36 +17,16 @@ export default function Header() {
             <div className="btn">Time Tracking</div>
           </div>
         </Link>
-        <div className="dropdown">
-          <div className="btn">Workspace</div>
-          <div className="drop-menu">
-            <div className="menu">
-              <div className="m-title">Workspace</div>
-              <div className="md-container">
-                <Link to="workspace/task">
-                  <div className="menu-desc">
-                    <div className="wrap-md">
-                      <div className="md-title">Task</div>
-                      <div className="desc">
-                        View the complete list of tasks that have been created.
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-                <Link to="workspace/member">
-                  <div className="menu-desc">
-                    <div className="wrap-md">
-                      <div className="md-title">Member</div>
-                      <div className="desc">
-                        View every new member that has been added
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
+        <Link to="workspace/task">
+          <div className="dropdown">
+            <div className="btn">Task</div>
           </div>
-        </div>
+        </Link>
+        <Link to="workspace/member">
+          <div className="dropdown">
+            <div className="btn">Member</div>
+          </div>
+        </Link>
       </div>
       <div className="profile">
         <img src={Profile} alt="profile" />
